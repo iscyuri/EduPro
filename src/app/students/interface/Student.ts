@@ -2,5 +2,5 @@ export interface Student {
     id:string,
     name:string,
     email:string
-    activo:string
+    active:string
 }

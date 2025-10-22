@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Students } from './students';
 import { StudentsList } from './componets/students-list/students-list';
 import { StudentsForm } from './componets/students-form/students-form';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
@@ -13,7 +13,6 @@ import { StudentsForm } from './componets/students-form/students-form';
     StudentsForm
   ],
   imports: [
-    CommonModule
-  ]
-})
+    CommonModule,FormsModule, ReactiveFormsModule
+]})
 export class StudentsModule { }
