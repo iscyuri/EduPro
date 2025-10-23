@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Login } from './featured/auth/login/login';
 
-const routes: Routes = [];
-
+const routes: Routes = [
+  { path: 'login', component: Login }
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
