@@ -4,22 +4,22 @@ import { Component } from '@angular/core';
   selector: 'app-dashboard',
   standalone: false,
   templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css'
+  styleUrl: './dashboard.css',
 })
 export class Dashboard {
   listItems = [
     {
-      name: 'Inicio',
+      name: 'Home',
       icon: 'home',
       url: '/dashboard',
     },
     {
-      name: 'Cursos',
+      name: 'Courses',
       icon: 'school',
       url: 'courses',
     },
     {
-      name: 'Alumnos',
+      name: 'Students',
       icon: 'groups',
       url: 'students',
     },

@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Student } from '../../interface/Student';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-students-list',
@@ -8,5 +7,5 @@ import { Student } from '../../interface/Student';
   styleUrl: './students-list.css'
 })
 export class StudentsList {
-@Input() students : Student[] = []
+
 }

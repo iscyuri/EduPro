@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Student } from './interface/Student'; 
-
-
 
 @Component({
   selector: 'app-students',
@@ -11,8 +8,4 @@ import { Student } from './interface/Student';
 })
 export class Students {
 
-students: Student[] = []; 
-
-
 }
-

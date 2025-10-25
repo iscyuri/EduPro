@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CoursesService } from '../../../../core/services/courses/courses';
+import { formGroup } from './Validators';
 
 @Component({
   selector: 'app-courses-form',
   standalone: false,
   templateUrl: './courses-form.html',
-  styleUrl: './courses-form.css'
+  styleUrl: './courses-form.css',
 })
 export class CoursesForm {
   createForm: FormGroup;
@@ -32,7 +36,7 @@ export class CoursesForm {
     });
   }
 
-   onSubmit(): void {
+  onSubmit(): void {
     if (this.isEditing) {
       this.courseService.updateCourse(this.createForm.value);
     } else {
@@ -54,7 +58,8 @@ export class CoursesForm {
       this.createForm.get(inputName)?.dirty
     );
   }
-getError(inputName: 'title' | 'description' | 'beginDate' | 'endDate') {
+
+  getError(inputName: 'title' | 'description' | 'beginDate' | 'endDate') {
     if (!this.createForm.get(inputName)?.errors) {
       return null;
     }
@@ -70,10 +75,10 @@ getError(inputName: 'title' | 'description' | 'beginDate' | 'endDate') {
     errors.forEach((error) => {
       switch (error) {
         case 'required':
-          message += 'Este campo es requerido';
+          message += 'The field is required';
           break;
         case 'minlength':
-          message += 'Este campo debe tener al menos 3 caracteres';
+          message += 'The field should have at least 3 characters.';
           break;
 
         default:
@@ -83,5 +88,4 @@ getError(inputName: 'title' | 'description' | 'beginDate' | 'endDate') {
 
     return message;
   }
-
 }
